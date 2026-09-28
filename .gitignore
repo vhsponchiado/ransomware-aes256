@@ -1,0 +1,20 @@
+# Arquivos criptografados
+*.encrypted
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.claude/
+
+# Sistema
+.DS_Store
+Thumbs.db
