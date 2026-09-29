@@ -1,12 +1,12 @@
-# 🔓 RANSOMWARE
+# RANSOMWARE
 
 Sistema educacional de criptografia de arquivos usando **AES-256-CTR**.
 
-> ⚠️ **AVISO LEGAL**: Este projeto é para fins educacionais, de pesquisa de segurança e CTF (Capture The Flag) apenas. Uso indevido é ilegal.
+> **AVISO LEGAL**: Este projeto é para fins educacionais, de pesquisa de segurança e CTF (Capture The Flag) apenas. Uso indevido é ilegal.
 
 ---
 
-## 📋 Índice
+## Índice
 
 1. [Instalação](#-instalação)
 2. [Uso Básico](#-uso-básico)
@@ -16,7 +16,7 @@ Sistema educacional de criptografia de arquivos usando **AES-256-CTR**.
 
 ---
 
-## 📦 Instalação
+## Instalação
 
 ### Passo 1: Instale as dependências
 
@@ -30,12 +30,12 @@ Isso instalará:
 ### Passo 2: Verifique a instalação
 
 ```bash
-python -c "import pyaes; print('✓ pyaes instalado com sucesso')"
+python -c "import pyaes; print('pyaes instalado com sucesso')"
 ```
 
 ---
 
-## 🚀 Uso Básico
+## Uso Básico
 
 ### Conceitos Importantes
 
@@ -54,9 +54,9 @@ python decrypter.py     → Para descriptografar
 
 ---
 
-## 📝 Uso Rápido
+## Uso Rápido
 
-### 1️⃣ Criptografar Arquivo Único
+### 1. Criptografar Arquivo Único
 
 ```bash
 python encrypter.py
@@ -72,10 +72,10 @@ Quando solicitar:
 **Resultado**:
 ```
 [*] Criptografando: test_files/dados_secretos.txt (563 bytes)
-[✓] Arquivo criptografado: test_files/dados_secretos.txt.encrypted
+[OK] Arquivo criptografado: test_files/dados_secretos.txt.encrypted
 ```
 
-### 2️⃣ Descriptografar Arquivo
+### 2. Descriptografar Arquivo
 
 ```bash
 python decrypter.py
@@ -91,10 +91,10 @@ Quando solicitar:
 **Resultado**:
 ```
 [*] Descriptografando: test_files/dados_secretos.txt.encrypted (563 bytes)
-[✓] Arquivo descriptografado: test_files/dados_secretos.txt
+[OK] Arquivo descriptografado: test_files/dados_secretos.txt
 ```
 
-### 3️⃣ Criptografar Diretório Inteiro
+### 3. Criptografar Diretório Inteiro
 
 ```bash
 python encrypter.py
@@ -112,13 +112,13 @@ Quando solicitar:
 [*] Criptografando 3 arquivo(s)...
 
 [*] Criptografando: test_files/arquivo1.txt (500 bytes)
-[✓] Arquivo criptografado: test_files/arquivo1.txt.encrypted
-[1/3] ✓
+[OK] Arquivo criptografado: test_files/arquivo1.txt.encrypted
+[1/3] OK
 
-[✓] 3 arquivo(s) criptografado(s)!
+[OK] 3 arquivo(s) criptografado(s)!
 ```
 
-### 4️⃣ Descriptografar Diretório
+### 4. Descriptografar Diretório
 
 ```bash
 python decrypter.py
@@ -133,7 +133,7 @@ Quando solicitar:
 
 ---
 
-## 📝 Exemplo Completo - Passo a Passo
+## Exemplo Completo - Passo a Passo
 
 ### Arquivo de Teste
 
@@ -169,7 +169,7 @@ python encrypter.py
 Menu:
 ```
 ╔════════════════════════════════════════════════╗
-║        🔓 RANSOMWARE ENCRYPTOR 🔓            ║
+║        RANSOMWARE ENCRYPTOR                   ║
 ╚════════════════════════════════════════════════╝
 
 [MENU]
@@ -185,7 +185,7 @@ Menu:
 **Saída**:
 ```
 [*] Criptografando: test_files/dados_secretos.txt (563 bytes)
-[✓] Arquivo criptografado: test_files/dados_secretos.txt.encrypted
+[OK] Arquivo criptografado: test_files/dados_secretos.txt.encrypted
 ```
 
 ### Passo 3: Verifique que foi criptografado
@@ -193,7 +193,7 @@ Menu:
 ```bash
 # Arquivo original não existe mais
 ls -la test_files/dados_secretos.txt
-# Erro: arquivo não encontrado ✓
+# Erro: arquivo não encontrado [OK]
 
 # Arquivo criptografado existe
 ls -la test_files/dados_secretos.txt.encrypted
@@ -201,7 +201,7 @@ ls -la test_files/dados_secretos.txt.encrypted
 
 # Conteúdo é ilegível
 cat test_files/dados_secretos.txt.encrypted
-# Mostra caracteres aleatórios/binários ✓
+# Mostra caracteres aleatórios/binários [OK]
 ```
 
 ### Passo 4: Descriptografe
@@ -213,7 +213,7 @@ python decrypter.py
 Menu:
 ```
 ╔════════════════════════════════════════════════╗
-║        🔒 RANSOMWARE DECRYPTOR 🔒            ║
+║        RANSOMWARE DECRYPTOR                   ║
 ╚════════════════════════════════════════════════╝
 
 [MENU]
@@ -229,7 +229,7 @@ Menu:
 **Saída**:
 ```
 [*] Descriptografando: test_files/dados_secretos.txt.encrypted (563 bytes)
-[✓] Arquivo descriptografado: test_files/dados_secretos.txt
+[OK] Arquivo descriptografado: test_files/dados_secretos.txt
 ```
 
 ### Passo 5: Verifique a integridade
@@ -237,7 +237,7 @@ Menu:
 ```bash
 # Arquivo criptografado não existe mais
 ls -la test_files/dados_secretos.txt.encrypted
-# Erro: arquivo não encontrado ✓
+# Erro: arquivo não encontrado [OK]
 
 # Arquivo original foi recuperado
 ls -la test_files/dados_secretos.txt
@@ -245,17 +245,17 @@ ls -la test_files/dados_secretos.txt
 
 # Conteúdo é idêntico ao original
 cat test_files/dados_secretos.txt
-# Mostra o conteúdo original ✓
+# Mostra o conteúdo original [OK]
 ```
 
-## 🔐 Especificações Técnicas
+## Especificações Técnicas
 
 - **Algoritmo**: AES-256-CTR (Advanced Encryption Standard)
 - **Tamanho da Chave**: 256 bits (32 caracteres)
 - **Modo**: CTR (Counter)
 - **Biblioteca**: pyaes
 
-## ⚠️ Importante
+## Importante
 
 - **A chave DEVE ter exatamente 32 caracteres**
 - O arquivo original é **DELETADO** após criptografar
@@ -265,7 +265,7 @@ cat test_files/dados_secretos.txt
 
 ---
 
-## 🧪 Testes
+## Testes
 
 ### Teste 1: Teste Automatizado (Recomendado)
 
@@ -274,11 +274,11 @@ python test_example.py
 ```
 
 Verifica:
-- ✓ Criptografia funciona
-- ✓ Arquivo original é deletado
-- ✓ Arquivo criptografado é ilegível
-- ✓ Descriptografia funciona
-- ✓ Conteúdo é idêntico ao original
+- [OK] Criptografia funciona
+- [OK] Arquivo original é deletado
+- [OK] Arquivo criptografado é ilegível
+- [OK] Descriptografia funciona
+- [OK] Conteúdo é idêntico ao original
 
 **Resultado esperado**:
 ```
@@ -288,7 +288,7 @@ Verifica:
 
 [1] Criptografando arquivo...
 [*] Criptografando: teste.txt (38 bytes)
-[✓] Arquivo criptografado: teste.txt.encrypted
+[OK] Arquivo criptografado: teste.txt.encrypted
 
 [2] Verificando arquivo criptografado...
     Arquivo: teste.txt.encrypted
@@ -297,10 +297,10 @@ Verifica:
 
 [3] Descriptografando arquivo...
 [*] Descriptografando: teste.txt.encrypted (38 bytes)
-[✓] Arquivo descriptografado: teste.txt
+[OK] Arquivo descriptografado: teste.txt
 
 [4] Verificando integridade...
-    ✓ Sucesso! Conteúdo idêntico ao original
+    [OK] Sucesso! Conteúdo idêntico ao original
 
 ╚════════════════════════════════════════════════╝
 TESTE CONCLUÍDO COM SUCESSO!
@@ -350,7 +350,7 @@ python decrypter.py
 
 ---
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 ### Problema: "Chave deve ter 32 caracteres"
 
@@ -405,7 +405,7 @@ python -c "import pyaes; print('OK')"
 
 ---
 
-## 📊 Performance
+## Performance
 
 Tempo de processamento por tamanho de arquivo:
 
@@ -420,7 +420,7 @@ Tempo de processamento por tamanho de arquivo:
 
 ---
 
-## 🌐 Como Contribuir
+## Como Contribuir
 
 Para adicionar ao GitHub:
 
@@ -446,20 +446,20 @@ git push -u origin main
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 ransomware/
 │
-├── 📄 encrypter.py              # Script para criptografar
-├── 📄 decrypter.py              # Script para descriptografar
-├── 📄 test_example.py           # Teste automatizado
-├── 📄 README.md                 # Esta documentação
-├── 📄 requirements.txt          # Dependências Python
-├── 📄 .gitignore               # Arquivos ignorados no Git
+├── encrypter.py              # Script para criptografar
+├── decrypter.py              # Script para descriptografar
+├── test_example.py           # Teste automatizado
+├── README.md                 # Esta documentação
+├── requirements.txt          # Dependências Python
+├── .gitignore               # Arquivos ignorados no Git
 │
-└── 📁 test_files/              # Pasta com arquivos de teste
-    └── 📄 dados_secretos.txt    # Arquivo de exemplo
+└── test_files/              # Pasta com arquivos de teste
+    └── dados_secretos.txt    # Arquivo de exemplo
 ```
 
 ### O que cada arquivo faz?
@@ -477,7 +477,7 @@ ransomware/
 
 ---
 
-## 🔐 Segurança
+## Segurança
 
 ### Especificações Técnicas
 
@@ -492,13 +492,13 @@ Biblioteca: pyaes v1.6.1
 
 1. **A chave DEVE ter exatamente 32 caracteres**
    ```bash
-   # ✓ Correto: 32 caracteres
+   # [OK] Correto: 32 caracteres
    SenhaForte1234567890123456789012
    
-   # ✗ Errado: menos de 32
+   # [ERRO] Errado: menos de 32
    SenhaForte123456789012345678
    
-   # ✗ Errado: mais de 32
+   # [ERRO] Errado: mais de 32
    SenhaForte12345678901234567890123
    ```
 
@@ -509,7 +509,7 @@ Biblioteca: pyaes v1.6.1
    
    # Depois:
    dados_secretos.txt.encrypted  (500 bytes)
-   dados_secretos.txt            (DELETADO!)
+   dados_secretos.txt            [DELETADO]
    ```
 
 3. **Arquivo criptografado é deletado após descriptografar**
@@ -519,44 +519,44 @@ Biblioteca: pyaes v1.6.1
    
    # Depois:
    dados_secretos.txt            (500 bytes)
-   dados_secretos.txt.encrypted  (DELETADO!)
+   dados_secretos.txt.encrypted  [DELETADO]
    ```
 
 4. **Sem a chave correta, dados são irrecuperáveis**
    ```bash
-   # ✓ Certo: mesma chave usada
+   # [OK] Certo: mesma chave usada
    Chave: SenhaForte1234567890123456789012
    Resultado: Arquivo descriptografado com sucesso
    
-   # ✗ Errado: chave diferente
+   # [ERRO] Errado: chave diferente
    Chave: OutraChave9876543210987654321098
    Resultado: Arquivo corrompido (IRRECUPERÁVEL)
    ```
 
 ### Dicas de Segurança
 
-✅ **Use chaves únicas e fortes**
+[OK] **Use chaves únicas e fortes**
 ```
 Bom:  ABCdefgh123456!@#$%7890abcdefgh
 Ruim: 12345678901234567890123456789012
 Ruim: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
-✅ **Guarde a chave em local seguro**
+[OK] **Guarde a chave em local seguro**
 - Não coloque em código
 - Não compartilhe por email
 - Use gerenciador de senhas
 
-✅ **Faça backup da chave**
+[OK] **Faça backup da chave**
 - Se perder a chave, dados são irrecuperáveis
 - Guarde em múltiplos locais seguros
 
-❌ **NÃO use chaves óbvias**
+[PERIGO] **NÃO use chaves óbvias**
 - Datas: 20262926092826092800
 - Sequências: 12345678901234567890123456789012
 - Padrões: aaaabbbbccccddddeeeeffffffff
 
-## 📊 Performance
+## Performance
 
 - **Arquivo 1 MB**: ~50ms
 - **Arquivo 10 MB**: ~500ms
@@ -566,7 +566,7 @@ Ruim: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 ---
 
-## 📚 Referências
+## Referências
 
 - [pyaes - GitHub](https://github.com/ricmoo/pyaes)
 - [AES Encryption - Wikipedia](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
@@ -575,33 +575,33 @@ Ruim: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 ---
 
-## ⚖️ Disclaimer Legal
+## Disclaimer Legal
 
 Este projeto é fornecido **APENAS para fins educacionais e de pesquisa**.
 
-### ✓ Uso Permitido
+### [OK] Uso Permitido
 
-- ✓ Use em ambientes controlados
-- ✓ Use para aprender sobre criptografia
-- ✓ Use em CTF competitions
-- ✓ Use para proteger seus próprios dados
-- ✓ Use em pesquisa acadêmica
-- ✓ Use em cursos de segurança
+- [OK] Use em ambientes controlados
+- [OK] Use para aprender sobre criptografia
+- [OK] Use em CTF competitions
+- [OK] Use para proteger seus próprios dados
+- [OK] Use em pesquisa acadêmica
+- [OK] Use em cursos de segurança
 
-### ✗ Uso Proibido
+### [PROIBIDO] Uso Proibido
 
-- ✗ NÃO use para prejudicar terceiros
-- ✗ NÃO use para extorsão ou chantagem
-- ✗ NÃO use contra vontade de outros
-- ✗ NÃO use para atividades ilegais
-- ✗ NÃO use para roubo de dados
-- ✗ NÃO use para sabotagem
+- [PROIBIDO] NÃO use para prejudicar terceiros
+- [PROIBIDO] NÃO use para extorsão ou chantagem
+- [PROIBIDO] NÃO use contra vontade de outros
+- [PROIBIDO] NÃO use para atividades ilegais
+- [PROIBIDO] NÃO use para roubo de dados
+- [PROIBIDO] NÃO use para sabotagem
 
 **Uso indevido é CRIME e sujeito a penalidades legais severas.**
 
 ---
 
-## 📞 Suporte Rápido
+## Suporte Rápido
 
 ```bash
 # Para testar se tudo funciona
@@ -617,6 +617,6 @@ pip list | grep pyaes
 
 ---
 
-**Desenvolvido para fins educacionais - 2026** 🔒
+**Desenvolvido para fins educacionais - 2026**
 
 *Use com responsabilidade!*
